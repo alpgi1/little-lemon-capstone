@@ -5,13 +5,11 @@ This is the final Capstone Project for the **Meta Front-End Developer Profession
 ## 🚀 Features
 * **Table Reservation:** A fully functional booking form with validation.
 * **Responsive Design:** Optimized for mobile, tablet, and desktop views.
-* **Modern UI/UX:** Designed using Figma and implemented with React.
-* **Unit Testing:** Form validation and logic tested using Jest.
+* **Modern UI/UX:** Styled with the assistance of AI tools to focus more on core React component architecture and business logic.
 
 ## 🛠️ Tech Stack
 * **Frontend:** React.js
 * **Styling:** CSS3 / SASS
-* **Testing:** Jest & React Testing Library
 * **Design:** Figma
 
 ## 🎯 Project Goals
