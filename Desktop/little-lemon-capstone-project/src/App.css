@@ -1,0 +1,580 @@
+/* ===========================
+   ROOT RESET (override Vite defaults)
+   =========================== */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* ===========================
+   GOOGLE FONTS IMPORT
+   =========================== */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Markazi+Text:wght@400;500&display=swap');
+
+/* ===========================
+   NAV
+   =========================== */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav__logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav__list {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav__list a {
+  font-family: var(--font-karla);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-highlight-dark);
+  transition: color 0.2s ease;
+}
+
+.nav__list a:hover {
+  color: var(--color-primary-yellow);
+}
+
+/* ===========================
+   HEADER / HERO
+   =========================== */
+.header {
+  background-color: var(--color-primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 40px 48px;
+  gap: 32px;
+  overflow: hidden;
+}
+
+.header__content {
+  flex: 1;
+  max-width: 480px;
+}
+
+.header__title {
+  font-family: var(--font-markazi);
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--color-primary-yellow);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.header__subtitle {
+  font-family: var(--font-markazi);
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.header__description {
+  font-family: var(--font-karla);
+  font-size: 1.0625rem;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 380px;
+}
+
+.header__btn {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-highlight-dark);
+  font-family: var(--font-karla);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 16px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.header__btn:hover {
+  background-color: #ddb910;
+  transform: translateY(-1px);
+}
+
+.header__image-wrapper {
+  flex-shrink: 0;
+}
+
+.header__image {
+  width: 380px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ===========================
+   MENU / SPECIALS
+   =========================== */
+.menu {
+  padding: 56px 40px;
+  background-color: #fff;
+}
+
+.menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.menu__title {
+  font-family: var(--font-markazi);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--color-highlight-dark);
+}
+
+.menu__btn {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-highlight-dark);
+  font-family: var(--font-karla);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.menu__btn:hover {
+  background-color: #ddb910;
+}
+
+.menu__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.menu-card {
+  background-color: var(--color-highlight-light);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.menu-card__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.menu-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-card__name {
+  font-family: var(--font-karla);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  color: var(--color-highlight-dark);
+}
+
+.menu-card__price {
+  font-family: var(--font-karla);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-secondary-salmon);
+}
+
+.menu-card__desc {
+  font-family: var(--font-karla);
+  font-size: 0.9375rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.menu-card__order {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-karla);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-highlight-dark);
+  margin-top: auto;
+}
+
+.menu-card__order::after {
+  content: '🛵';
+  font-size: 1.1rem;
+}
+
+/* ===========================
+   TESTIMONIALS
+   =========================== */
+.testimonials {
+  background-color: #FAEBD7;
+  padding: 56px 40px;
+  text-align: center;
+}
+
+.testimonials__title {
+  font-family: var(--font-markazi);
+  font-size: 2.75rem;
+  font-weight: 500;
+  color: var(--color-primary-green);
+  margin-bottom: 40px;
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: left;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.testimonial-card__stars {
+  display: flex;
+  gap: 3px;
+}
+
+.star {
+  color: var(--color-primary-yellow);
+  font-size: 1.1rem;
+}
+
+.star--empty {
+  color: #ccc;
+}
+
+.testimonial-card__reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-card__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.testimonial-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-card__name {
+  font-family: var(--font-karla);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-highlight-dark);
+}
+
+.testimonial-card__quote {
+  font-family: var(--font-karla);
+  font-size: 0.9375rem;
+  color: #444;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ===========================
+   ABOUT
+   =========================== */
+.about {
+  padding: 56px 40px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about__content {
+  flex: 1;
+}
+
+.about__title {
+  font-family: var(--font-markazi);
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--color-primary-green);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.about__subtitle {
+  font-family: var(--font-markazi);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-highlight-dark);
+  margin-bottom: 24px;
+}
+
+.about__text {
+  font-family: var(--font-karla);
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  max-width: 480px;
+}
+
+.about__images {
+  flex-shrink: 0;
+  position: relative;
+  width: 380px;
+  height: 320px;
+}
+
+.about__img--back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.about__img--front {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+  background-color: var(--color-primary-green);
+  padding: 48px 40px 24px;
+  color: #fff;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer__logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 4px;
+}
+
+.footer__brand-name {
+  font-family: var(--font-markazi);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-primary-yellow);
+}
+
+.footer__col-title {
+  font-family: var(--font-karla);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  color: var(--color-primary-yellow);
+  margin-bottom: 16px;
+}
+
+.footer__col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__col ul li a {
+  font-family: var(--font-karla);
+  font-size: 0.9375rem;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.footer__col ul li a:hover {
+  color: var(--color-primary-yellow);
+}
+
+.footer__contact p {
+  font-family: var(--font-karla);
+  font-size: 0.9375rem;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__social a {
+  font-family: var(--font-karla);
+  font-size: 0.9375rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.footer__social a:hover {
+  color: var(--color-primary-yellow);
+}
+
+.footer__social a::before {
+  font-size: 1rem;
+}
+
+.footer__divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.footer__bottom {
+  text-align: center;
+  font-family: var(--font-karla);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 1024px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 12px 20px;
+  }
+
+  .nav__list {
+    gap: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 32px 20px;
+  }
+
+  .header__image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .menu {
+    padding: 40px 20px;
+  }
+
+  .menu__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    padding: 40px 20px;
+  }
+
+  .testimonials__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .about__images {
+    width: 100%;
+    height: 280px;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav__list {
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+  }
+}
